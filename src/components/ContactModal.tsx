@@ -52,17 +52,33 @@ export const ContactModal: React.FC<ContactModalProps> = ({
     setTimeout(() => setCopiedField(null), 2500);
   };
 
+  const subjectText = prefillSubject || `Operations Inquiry from ${formData.name || 'Property Principal'}`;
+  const fullMessageBody = `Hi Lauren,
+
+Name: ${formData.name}
+Email: ${formData.email}
+Portfolio Scope: ${formData.portfolioSize}
+
+Message:
+${formData.message}
+
+---
+Sent from your portfolio website`;
+
+  const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(personal.email)}&su=${encodeURIComponent(subjectText)}&body=${encodeURIComponent(fullMessageBody)}`;
+  const mailtoUrl = `mailto:${personal.email}?subject=${encodeURIComponent(subjectText)}&body=${encodeURIComponent(fullMessageBody)}`;
+  const whatsappUrl = `https://wa.me/639159777653?text=${encodeURIComponent(`Hi Lauren, I am reaching out from your portfolio. Name: ${formData.name || 'Client'}. Scope: ${formData.portfolioSize}. Message: ${formData.message}`)}`;
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitted(true);
-    // Open mailto link as fallback
-    const subject = encodeURIComponent(
-      prefillSubject || `Inquiry from ${formData.name || 'Property Principal'}`
-    );
-    const body = encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\nPortfolio Size: ${formData.portfolioSize}\n\nMessage:\n${formData.message}`
-    );
-    window.location.href = `mailto:${personal.email}?subject=${subject}&body=${body}`;
+
+    // Attempt mailto trigger
+    try {
+      window.location.href = mailtoUrl;
+    } catch {
+      // Fallback handled by the confirmation screen
+    }
   };
 
   return (
@@ -247,17 +263,17 @@ export const ContactModal: React.FC<ContactModalProps> = ({
         {submitted ? (
           <div
             style={{
-              padding: '2rem',
+              padding: '2rem 1.5rem',
               textAlign: 'center',
               backgroundColor: 'var(--green-50)',
               border: '1px solid var(--green-border)',
-              borderRadius: '1rem',
+              borderRadius: '1.25rem',
             }}
           >
             <div
               style={{
-                width: '48px',
-                height: '48px',
+                width: '52px',
+                height: '52px',
                 borderRadius: '50%',
                 backgroundColor: 'var(--green-100)',
                 color: 'var(--green-900)',
@@ -265,25 +281,142 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                 alignItems: 'center',
                 justifyContent: 'center',
                 margin: '0 auto 1rem auto',
+                boxShadow: '0 4px 12px rgba(19, 56, 38, 0.12)',
               }}
             >
-              <IconCheckCircle size={26} />
+              <IconCheckCircle size={28} />
             </div>
-            <h4 style={{ fontSize: '1.25rem', color: 'var(--text-heading)', marginBottom: '0.5rem' }}>
-              Message Ready to Dispatch
+
+            <h4 style={{ fontSize: '1.4rem', color: 'var(--text-heading)', marginBottom: '0.4rem' }}>
+              Your Message is Ready
             </h4>
-            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginBottom: '1.25rem' }}>
-              Your default email client has opened with your inquiry pre-filled. You can also reach out directly to{' '}
-              <strong>{personal.email}</strong> or on WhatsApp at <strong>{personal.phone}</strong>.
+            <p style={{ fontSize: '0.92rem', color: 'var(--text-secondary)', marginBottom: '1.75rem', maxWidth: '520px', margin: '0 auto 1.75rem auto' }}>
+              Choose your preferred way to send this message to <strong>{personal.email}</strong>:
             </p>
-            <button
-              type="button"
-              onClick={onClose}
-              className="btn btn-primary"
-              style={{ padding: '0.65rem 1.5rem', fontSize: '0.88rem' }}
+
+            {/* Action Grid */}
+            <div
+              style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
+                gap: '0.75rem',
+                marginBottom: '1.75rem',
+              }}
             >
-              Close Window
-            </button>
+              {/* Web Gmail */}
+              <a
+                href={gmailUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary"
+                style={{
+                  padding: '0.75rem 1rem',
+                  fontSize: '0.88rem',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '0.45rem',
+                }}
+              >
+                <IconMail size={16} />
+                <span>Open in Web Gmail</span>
+                <IconExternalLink size={13} />
+              </a>
+
+              {/* Default Mail Client */}
+              <a
+                href={mailtoUrl}
+                className="btn btn-secondary"
+                style={{
+                  padding: '0.75rem 1rem',
+                  fontSize: '0.88rem',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '0.45rem',
+                }}
+              >
+                <IconMail size={16} />
+                <span>Open Default Mail App</span>
+              </a>
+
+              {/* WhatsApp */}
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  padding: '0.75rem 1rem',
+                  borderRadius: '999px',
+                  fontSize: '0.88rem',
+                  fontWeight: 600,
+                  backgroundColor: '#25D366',
+                  color: '#ffffff',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '0.45rem',
+                  textDecoration: 'none',
+                }}
+              >
+                <IconPhone size={15} />
+                <span>Send via WhatsApp</span>
+                <IconExternalLink size={13} />
+              </a>
+            </div>
+
+            {/* Quick Copy Draft & Close */}
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'center',
+                flexWrap: 'wrap',
+                gap: '1rem',
+                alignItems: 'center',
+                paddingTop: '1.25rem',
+                borderTop: '1px solid var(--green-border)',
+              }}
+            >
+              <button
+                type="button"
+                onClick={() => handleCopy(fullMessageBody, 'draft')}
+                style={{
+                  fontSize: '0.85rem',
+                  fontWeight: 600,
+                  color: 'var(--green-900)',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.4rem',
+                  cursor: 'pointer',
+                }}
+              >
+                {copiedField === 'draft' ? <IconCheckCircle size={15} /> : <IconCopy size={15} />}
+                <span>{copiedField === 'draft' ? 'Draft Copied to Clipboard!' : 'Copy Full Draft Text'}</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => setSubmitted(false)}
+                style={{
+                  fontSize: '0.85rem',
+                  fontWeight: 600,
+                  color: 'var(--text-secondary)',
+                  cursor: 'pointer',
+                  textDecoration: 'underline',
+                }}
+              >
+                Edit Message
+              </button>
+
+              <button
+                type="button"
+                onClick={onClose}
+                className="btn btn-secondary"
+                style={{ padding: '0.45rem 1.25rem', fontSize: '0.82rem' }}
+              >
+                Done
+              </button>
+            </div>
           </div>
         ) : (
           /* Form */

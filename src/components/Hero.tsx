@@ -234,13 +234,13 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
                 position: 'relative',
                 zIndex: 1,
                 width: '100%',
-                maxWidth: '410px',
+                maxWidth: '400px',
                 borderRadius: '1.75rem',
                 overflow: 'hidden',
                 boxShadow: 'var(--shadow-xl)',
                 border: '4px solid #ffffff',
                 backgroundColor: 'var(--bg-warm-tint)',
-                aspectRatio: '4 / 4.8',
+                aspectRatio: '3 / 4',
               }}
             >
               <img
@@ -250,20 +250,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
                   width: '100%',
                   height: '100%',
                   objectFit: 'cover',
-                  objectPosition: 'center 22%',
+                  objectPosition: 'center 88%',
                   display: 'block',
-                }}
-              />
-
-              {/* Bottom Subtle Gradient Overlay */}
-              <div
-                style={{
-                  position: 'absolute',
-                  bottom: 0,
-                  left: 0,
-                  right: 0,
-                  height: '80px',
-                  background: 'linear-gradient(to top, rgba(12, 35, 23, 0.6) 0%, transparent 100%)',
                 }}
               />
             </div>

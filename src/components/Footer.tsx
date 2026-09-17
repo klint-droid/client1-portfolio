@@ -97,19 +97,21 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
                 style={{
                   width: '38px',
                   height: '38px',
-                  borderRadius: '10px',
-                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                  color: 'var(--gold-400)',
+                  borderRadius: '50%',
+                  overflow: 'hidden',
+                  border: '1.5px solid var(--gold-400)',
+                  boxShadow: '0 2px 8px rgba(0, 0, 0, 0.25)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  fontFamily: 'var(--font-serif)',
-                  fontWeight: 700,
-                  fontSize: '1.1rem',
-                  border: '1px solid rgba(197, 155, 83, 0.3)',
+                  flexShrink: 0,
                 }}
               >
-                LT
+                <img
+                  src="/favicon.png"
+                  alt="Lauren Joyce Tugadi"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
               </div>
               <div style={{ fontFamily: 'var(--font-serif)', fontSize: '1.2rem', fontWeight: 700, color: '#ffffff' }}>
                 Lauren Joyce Tugadi

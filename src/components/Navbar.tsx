@@ -85,21 +85,24 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact }) => {
             style={{
               width: '32px',
               height: '32px',
-              borderRadius: '8px',
-              background: 'linear-gradient(135deg, var(--green-950) 0%, var(--green-850) 100%)',
-              color: 'var(--gold-400)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontFamily: 'var(--font-serif)',
-              fontSize: '1rem',
-              fontWeight: 700,
-              boxShadow: '0 2px 8px rgba(19, 56, 38, 0.15)',
-              border: '1px solid rgba(197, 155, 83, 0.35)',
+              borderRadius: '50%',
+              overflow: 'hidden',
+              boxShadow: '0 2px 8px rgba(19, 56, 38, 0.18)',
+              border: '1.5px solid var(--gold-400)',
               flexShrink: 0,
+              backgroundColor: 'var(--bg-warm-tint)',
             }}
           >
-            LT
+            <img
+              src="/favicon.png"
+              alt="Lauren Joyce Tugadi"
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+                display: 'block',
+              }}
+            />
           </div>
 
           <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
