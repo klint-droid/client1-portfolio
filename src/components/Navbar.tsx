@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { IconCalendar, IconMail, IconCheckCircle } from './Icons';
+import { scrollToSection } from '../utils/scroll';
 
 interface NavbarProps {
   onOpenContact: () => void;
@@ -38,11 +39,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact }) => {
   }, []);
 
   const navLinks = [
-    { label: 'Services', href: '#services' },
-    { label: 'Experience', href: '#experience' },
-    { label: 'Systems', href: '#systems' },
-    { label: 'Reliability', href: '#reliability' },
-    { label: 'ROI Calculator', href: '#calculator' },
+    { label: 'Services', id: 'services' },
+    { label: 'Experience', id: 'experience' },
+    { label: 'Systems', id: 'systems' },
+    { label: 'Reliability', id: 'reliability' },
+    { label: 'ROI Calculator', id: 'calculator' },
   ];
 
   return (
@@ -71,13 +72,18 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact }) => {
         }}
       >
         {/* Brand Monogram & Name - Sleek single-line / compact layout */}
-        <a
-          href="#"
+        <button
+          type="button"
+          onClick={() => scrollToSection('top')}
           style={{
             display: 'flex',
             alignItems: 'center',
             gap: '0.65rem',
-            textDecoration: 'none',
+            background: 'none',
+            border: 'none',
+            padding: 0,
+            cursor: 'pointer',
+            textAlign: 'left',
             flexShrink: 0,
           }}
         >
@@ -132,7 +138,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact }) => {
               Real Estate & STRA VA
             </span>
           </div>
-        </a>
+        </button>
 
         {/* Desktop Nav Links - Single Line, Sleek */}
         <nav
@@ -144,9 +150,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact }) => {
           className="desktop-nav"
         >
           {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
+            <button
+              key={link.id}
+              type="button"
+              onClick={() => scrollToSection(link.id)}
               style={{
                 fontSize: '0.84rem',
                 fontWeight: 600,
@@ -154,12 +161,15 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact }) => {
                 whiteSpace: 'nowrap',
                 transition: 'color 0.2s ease',
                 padding: '0.2rem 0',
+                background: 'none',
+                border: 'none',
+                cursor: 'pointer',
               }}
               onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--green-900)')}
               onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-secondary)')}
             >
               {link.label}
-            </a>
+            </button>
           ))}
         </nav>
 
@@ -271,20 +281,28 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact }) => {
           }}
         >
           {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={() => setMobileMenuOpen(false)}
+            <button
+              key={link.id}
+              type="button"
+              onClick={() => {
+                setMobileMenuOpen(false);
+                scrollToSection(link.id);
+              }}
               style={{
                 fontSize: '0.92rem',
                 fontWeight: 600,
                 color: 'var(--text-heading)',
                 padding: '0.4rem 0',
+                border: 'none',
                 borderBottom: '1px solid var(--border-subtle)',
+                background: 'none',
+                textAlign: 'left',
+                cursor: 'pointer',
+                width: '100%',
               }}
             >
               {link.label}
-            </a>
+            </button>
           ))}
           <div style={{ paddingTop: '0.35rem', display: 'flex', flexDirection: 'column', gap: '0.65rem' }}>
             <div

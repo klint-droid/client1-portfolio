@@ -7,6 +7,7 @@ import {
   IconCheckCircle,
   IconShieldCheck,
 } from './Icons';
+import { scrollToSection } from '../utils/scroll';
 
 interface FooterProps {
   onOpenContact: () => void;
@@ -132,29 +133,104 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
             </div>
             <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem', fontSize: '0.9rem', color: 'var(--text-on-dark-muted)' }}>
               <li>
-                <a href="#services" style={{ transition: 'color 0.2s' }} onMouseEnter={(e) => (e.currentTarget.style.color = '#ffffff')} onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-on-dark-muted)')}>
+                <button
+                  type="button"
+                  onClick={() => scrollToSection('services')}
+                  style={{
+                    background: 'none',
+                    border: 'none',
+                    padding: 0,
+                    cursor: 'pointer',
+                    fontSize: '0.9rem',
+                    color: 'var(--text-on-dark-muted)',
+                    textAlign: 'left',
+                    transition: 'color 0.2s',
+                  }}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = '#ffffff')}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-on-dark-muted)')}
+                >
                   Core Specializations
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#experience" style={{ transition: 'color 0.2s' }} onMouseEnter={(e) => (e.currentTarget.style.color = '#ffffff')} onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-on-dark-muted)')}>
+                <button
+                  type="button"
+                  onClick={() => scrollToSection('experience')}
+                  style={{
+                    background: 'none',
+                    border: 'none',
+                    padding: 0,
+                    cursor: 'pointer',
+                    fontSize: '0.9rem',
+                    color: 'var(--text-on-dark-muted)',
+                    textAlign: 'left',
+                    transition: 'color 0.2s',
+                  }}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = '#ffffff')}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-on-dark-muted)')}
+                >
                   Career & Case Milestones
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#systems" style={{ transition: 'color 0.2s' }} onMouseEnter={(e) => (e.currentTarget.style.color = '#ffffff')} onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-on-dark-muted)')}>
+                <button
+                  type="button"
+                  onClick={() => scrollToSection('systems')}
+                  style={{
+                    background: 'none',
+                    border: 'none',
+                    padding: 0,
+                    cursor: 'pointer',
+                    fontSize: '0.9rem',
+                    color: 'var(--text-on-dark-muted)',
+                    textAlign: 'left',
+                    transition: 'color 0.2s',
+                  }}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = '#ffffff')}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-on-dark-muted)')}
+                >
                   Software Ecosystem
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#reliability" style={{ transition: 'color 0.2s' }} onMouseEnter={(e) => (e.currentTarget.style.color = '#ffffff')} onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-on-dark-muted)')}>
+                <button
+                  type="button"
+                  onClick={() => scrollToSection('reliability')}
+                  style={{
+                    background: 'none',
+                    border: 'none',
+                    padding: 0,
+                    cursor: 'pointer',
+                    fontSize: '0.9rem',
+                    color: 'var(--text-on-dark-muted)',
+                    textAlign: 'left',
+                    transition: 'color 0.2s',
+                  }}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = '#ffffff')}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-on-dark-muted)')}
+                >
                   Zero-Downtime Guarantee
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#calculator" style={{ transition: 'color 0.2s' }} onMouseEnter={(e) => (e.currentTarget.style.color = '#ffffff')} onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-on-dark-muted)')}>
+                <button
+                  type="button"
+                  onClick={() => scrollToSection('calculator')}
+                  style={{
+                    background: 'none',
+                    border: 'none',
+                    padding: 0,
+                    cursor: 'pointer',
+                    fontSize: '0.9rem',
+                    color: 'var(--text-on-dark-muted)',
+                    textAlign: 'left',
+                    transition: 'color 0.2s',
+                  }}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = '#ffffff')}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-on-dark-muted)')}
+                >
                   Portfolio ROI Estimator
-                </a>
+                </button>
               </li>
             </ul>
           </div>

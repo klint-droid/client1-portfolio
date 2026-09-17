@@ -10,6 +10,7 @@ import {
   IconStar,
   IconMapPin,
 } from './Icons';
+import { scrollToSection } from '../utils/scroll';
 
 interface HeroProps {
   onOpenContact: () => void;
@@ -164,14 +165,15 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
                 <span>Book a Discovery Consultation</span>
               </button>
 
-              <a
-                href="#services"
+              <button
+                type="button"
+                onClick={() => scrollToSection('services')}
                 className="btn btn-secondary"
                 style={{ padding: '0.95rem 1.85rem', fontSize: '0.95rem' }}
               >
                 <span>View Specializations</span>
                 <IconArrowRight size={16} />
-              </a>
+              </button>
 
               <a
                 href="/Lauren_Joyce_Tugadi_Resume.pdf"

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
@@ -10,11 +10,24 @@ import { ReliabilitySection } from './components/ReliabilitySection';
 import { FaqSection } from './components/FaqSection';
 import { Footer } from './components/Footer';
 import { ContactModal } from './components/ContactModal';
+import { scrollToSection } from './utils/scroll';
 
 export function App() {
   const [contactOpen, setContactOpen] = useState(false);
   const [prefillSubject, setPrefillSubject] = useState('');
   const [prefillMessage, setPrefillMessage] = useState('');
+
+  useEffect(() => {
+    if (window.location.hash) {
+      const targetId = window.location.hash.replace('#', '');
+      window.history.replaceState(null, '', window.location.pathname + window.location.search);
+      if (targetId) {
+        setTimeout(() => {
+          scrollToSection(targetId);
+        }, 150);
+      }
+    }
+  }, []);
 
   const handleOpenContact = () => {
     setPrefillSubject('Consultation Request with Lauren Joyce Tugadi');
