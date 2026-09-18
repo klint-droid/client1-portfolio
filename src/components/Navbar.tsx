@@ -103,7 +103,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact }) => {
             }}
           >
             <img
-              src="/favicon.png"
+              src="/lauren-avatar.png"
               alt="Lauren Joyce Tugadi"
               style={{
                 width: '100%',

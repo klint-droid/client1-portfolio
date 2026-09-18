@@ -47,10 +47,10 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
               <IconShieldCheck size={14} /> Immediate Capacity
             </span>
             <h3 style={{ fontSize: '2rem', color: '#ffffff', marginBottom: '0.5rem' }}>
-              Ready to automate and stabilize your property operations?
+              Ready to streamline your day-to-day operations?
             </h3>
             <p style={{ color: 'var(--text-on-dark-muted)', fontSize: '0.98rem' }}>
-              Directly supporting holiday home operators, property managers, and real estate principals across Australia and the UAE.
+              Providing reliable administrative, executive, and operational support across Australia and the UAE.
             </p>
           </div>
 
@@ -96,8 +96,8 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem' }}>
               <div
                 style={{
-                  width: '38px',
-                  height: '38px',
+                  width: '40px',
+                  height: '40px',
                   borderRadius: '50%',
                   overflow: 'hidden',
                   border: '1.5px solid var(--gold-400)',
@@ -106,12 +106,19 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
                   alignItems: 'center',
                   justifyContent: 'center',
                   flexShrink: 0,
+                  backgroundColor: 'var(--bg-warm-tint)',
                 }}
               >
                 <img
-                  src="/favicon.png"
+                  src="/lauren-avatar.png"
                   alt="Lauren Joyce Tugadi"
-                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    objectPosition: 'center center',
+                    display: 'block',
+                  }}
                 />
               </div>
               <div style={{ fontFamily: 'var(--font-serif)', fontSize: '1.2rem', fontWeight: 700, color: '#ffffff' }}>
@@ -119,10 +126,10 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
               </div>
             </div>
             <p style={{ fontSize: '0.88rem', color: 'var(--text-on-dark-muted)', lineHeight: 1.6, marginBottom: '1.25rem' }}>
-              Senior Real Estate & Holiday Home Operations Virtual Assistant with 8+ years experience supporting 1,030+ properties across Australia and the UAE.
+              Administrative, Executive & Operations Virtual Assistant with 8+ years of experience supporting Australian businesses and international teams.
             </p>
             <div style={{ fontSize: '0.78rem', color: 'var(--text-on-dark-muted)' }}>
-              Laguna, Philippines • Flexible AU (AEST) Hours
+              Laguna, Philippines • Flexible AU (AEST/AEDT) Hours
             </div>
           </div>
 
@@ -149,7 +156,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
                   onMouseEnter={(e) => (e.currentTarget.style.color = '#ffffff')}
                   onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-on-dark-muted)')}
                 >
-                  Core Specializations
+                  Operational Specializations
                 </button>
               </li>
               <li>
@@ -169,7 +176,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
                   onMouseEnter={(e) => (e.currentTarget.style.color = '#ffffff')}
                   onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-on-dark-muted)')}
                 >
-                  Career & Case Milestones
+                  Career Milestones
                 </button>
               </li>
               <li>
@@ -209,7 +216,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
                   onMouseEnter={(e) => (e.currentTarget.style.color = '#ffffff')}
                   onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-on-dark-muted)')}
                 >
-                  Zero-Downtime Guarantee
+                  Reliability Guarantee
                 </button>
               </li>
               <li>
