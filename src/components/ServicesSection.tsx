@@ -51,10 +51,9 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
         {/* Section Header */}
         <div className="section-header">
           <span className="sub-caption">Operational Specializations</span>
-          <h2>Bespoke Operational Support for Property Leaders</h2>
+          <h2>Practical Operational Support for Property & Business Leaders</h2>
           <p>
-            Whether running an Australian holiday home portfolio or managing Dubai brokerage compliance,
-            here is how I take the daily operational friction off your plate.
+            Whether you need support with day-to-day administration, operations, client coordination, or the details that keep your business moving, here is how I take the daily operational friction off your plate.
           </p>
         </div>
 
