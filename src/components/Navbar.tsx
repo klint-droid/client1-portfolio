@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { IconCalendar, IconMail, IconCheckCircle } from './Icons';
 import { scrollToSection } from '../utils/scroll';
+import laurenAvatar from '../assets/lauren-avatar.png';
 
 interface NavbarProps {
   onOpenContact: () => void;
@@ -103,7 +104,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact }) => {
             }}
           >
             <img
-              src="/lauren-avatar.png"
+              src={laurenAvatar}
               alt="Lauren Joyce Tugadi"
               style={{
                 width: '100%',

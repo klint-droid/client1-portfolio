@@ -8,6 +8,7 @@ import {
   IconShieldCheck,
 } from './Icons';
 import { scrollToSection } from '../utils/scroll';
+import laurenAvatar from '../assets/lauren-avatar.png';
 
 interface FooterProps {
   onOpenContact: () => void;
@@ -110,7 +111,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
                 }}
               >
                 <img
-                  src="/lauren-avatar.png"
+                  src={laurenAvatar}
                   alt="Lauren Joyce Tugadi"
                   style={{
                     width: '100%',
