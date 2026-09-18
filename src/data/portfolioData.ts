@@ -32,11 +32,12 @@ export interface ToolItem {
 export const portfolioData = {
   personal: {
     name: 'Lauren Joyce Tugadi',
-    role: 'Senior Real Estate & Holiday Home Operations Virtual Assistant',
-    badge: 'Available for Australian (AEST) & Global Real Estate Teams',
-    headline: 'Scaling Short-Term Rentals & Real Estate Operations with Calm Executive Precision.',
-    subheadline:
-      '8+ years supporting premier Australian and Dubai property businesses. Specialized in Homhero, PriceLabs, NSW STRA compliance, multi-OTA calendar synchronization, and high-volume reservation triage.',
+    role: 'Executive Assistant & Operations Specialist',
+    badge: 'Available for Australian (AEST / AEDT) & Global Property Teams',
+    headline: 'Executive Assistant & Operations Specialist',
+    subheadline: 'Administrative Support • Business Operations • Real Estate & Short-Term Rentals (STR)',
+    bio:
+      'Hi, I’m Lauren Joyce Tugadi. With 8+ years of experience supporting fast-paced businesses across Australia, Dubai, and the Philippines, I provide reliable executive, administrative, and operational support that keeps teams organised and moving. My experience spans real estate, short-term rentals, reservations, HR, and business administration, giving me a versatile administrative foundation and specialised expertise in high-volume property and short-term rental operations.',
     location: 'Biñan City, Laguna, Philippines',
     email: 'ljtugadi@gmail.com',
     phone: '+63 915 9777 653',

@@ -92,11 +92,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
             {/* Main Headline */}
             <h1
               style={{
-                marginBottom: '1.25rem',
+                marginBottom: '0.85rem',
                 color: 'var(--text-heading)',
               }}
             >
-              Real Estate & Holiday Home Operations{' '}
+              Executive Assistant &{' '}
               <span
                 style={{
                   fontStyle: 'italic',
@@ -105,22 +105,34 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
                   display: 'inline-block',
                 }}
               >
-                Executive Assistant
+                Operations Specialist
               </span>
             </h1>
 
-            {/* Subtitle */}
-            <p
+            {/* Subtitle / Focus Areas */}
+            <div
               style={{
-                fontSize: '1.15rem',
-                lineHeight: 1.65,
-                color: 'var(--text-secondary)',
-                marginBottom: '1.75rem',
-                maxWidth: '600px',
+                fontSize: '1.02rem',
+                fontWeight: 600,
+                color: 'var(--green-800)',
+                marginBottom: '1.25rem',
+                letterSpacing: '0.01em',
               }}
             >
-              Hi, I’m <strong>{personal.name}</strong>. With over <strong>8+ years of high-volume operational experience</strong> across
-              Australian and Dubai holiday home portfolios, I manage the back-office engines that keep property businesses profitable, compliant, and calm.
+              Administrative Support • Business Operations • Real Estate & Short-Term Rentals (STR)
+            </div>
+
+            {/* Bio */}
+            <p
+              style={{
+                fontSize: '1.08rem',
+                lineHeight: 1.68,
+                color: 'var(--text-secondary)',
+                marginBottom: '1.75rem',
+                maxWidth: '620px',
+              }}
+            >
+              Hi, I’m <strong>Lauren Joyce Tugadi</strong>. With <strong>8+ years of experience</strong> supporting fast-paced businesses across Australia, Dubai, and the Philippines, I provide reliable executive, administrative, and operational support that keeps teams organised and moving. My experience spans real estate, short-term rentals, reservations, HR, and business administration, giving me a versatile administrative foundation and specialised expertise in high-volume property and short-term rental operations.
             </p>
 
             {/* Value Points Pill Strip */}
@@ -136,7 +148,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
                 <IconCheckCircle size={14} /> Homhero & PriceLabs
               </span>
               <span className="pill-badge neutral">
-                <IconShieldCheck size={14} /> NSW STRA Compliance (230+ Units)
+                <IconCheckCircle size={14} /> HubSpot CRM
               </span>
               <span className="pill-badge neutral">
                 <IconSparkles size={14} /> Multi-OTA Sync (Airbnb, Booking, VRBO)

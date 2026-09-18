@@ -89,14 +89,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact }) => {
         >
           <div
             style={{
-              width: '32px',
-              height: '32px',
+              width: '34px',
+              height: '34px',
               borderRadius: '50%',
               overflow: 'hidden',
               boxShadow: '0 2px 8px rgba(19, 56, 38, 0.18)',
               border: '1.5px solid var(--gold-400)',
               flexShrink: 0,
               backgroundColor: 'var(--bg-warm-tint)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
             }}
           >
             <img
@@ -106,6 +109,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact }) => {
                 width: '100%',
                 height: '100%',
                 objectFit: 'cover',
+                objectPosition: 'center center',
                 display: 'block',
               }}
             />
@@ -120,22 +124,23 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact }) => {
                 color: 'var(--text-heading)',
                 lineHeight: 1.15,
                 whiteSpace: 'nowrap',
+                letterSpacing: '0.02em',
               }}
             >
-              Lauren Joyce Tugadi
+              LAUREN JOYCE TUGADI
             </span>
             <span
               style={{
                 fontSize: '0.68rem',
                 color: 'var(--text-tertiary)',
-                letterSpacing: '0.04em',
+                letterSpacing: '0.06em',
                 textTransform: 'uppercase',
                 fontWeight: 600,
                 lineHeight: 1.1,
                 whiteSpace: 'nowrap',
               }}
             >
-              Real Estate & STRA VA
+              EXECUTIVE & OPERATIONS SUPPORT
             </span>
           </div>
         </button>
