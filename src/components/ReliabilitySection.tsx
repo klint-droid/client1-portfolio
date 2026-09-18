@@ -164,10 +164,10 @@ export const ReliabilitySection: React.FC = () => {
               </span>
             </div>
             <h3 style={{ fontSize: '1.75rem', color: '#ffffff', marginBottom: '0.5rem' }}>
-              Aligned with Australian & UAE Business Cycles
+              Aligned with Australian Business Cycles
             </h3>
             <p style={{ color: 'var(--text-on-dark-muted)', fontSize: '0.95rem' }}>
-              Working standard hours across Sydney, Melbourne, Brisbane (AEST), and Dubai (GST). Instant Slack, WhatsApp, and email response times during active property turnovers and morning check-outs.
+              Working standard hours across Sydney, Melbourne, and Brisbane (AEST). Instant Slack, WhatsApp, and email response times during active working hours.
             </p>
           </div>
 

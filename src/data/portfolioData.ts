@@ -42,7 +42,7 @@ export const portfolioData = {
     email: 'ljtugadi@gmail.com',
     phone: '+63 915 9777 653',
     linkedin: 'https://www.linkedin.com/in/lauren-tugadi',
-    availability: 'Full-Time (40 hrs/wk) • AEST / GST Timezones',
+    availability: 'Full-Time (40 hrs/wk) • Australian (AEST / AEDT) Hours',
     timezoneOffset: 'UTC+8 (Only 2 hrs behind Sydney/Melbourne AEST)',
     experienceYears: '8+',
     education: 'Bachelor of Science in Psychology, San Beda University (2016)',
