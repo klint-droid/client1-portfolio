@@ -304,8 +304,8 @@ export const portfolioData = {
 
   faqs: [
     {
-      q: 'How does your schedule align with Australian real estate businesses?',
-      a: 'The Philippines (UTC+8) is only 2 hours behind Sydney / Melbourne (AEST/AEDT). I work during standard Australian business hours (e.g., 8:00 AM – 5:00 PM AEST) so your team and guests have real-time support without delay.',
+      q: 'How does your schedule align with Australian businesses?',
+      a: 'The Philippines (UTC+8) can align closely with Australian business hours, depending on the location and daylight saving period. I can work within agreed Australian business hours to provide consistent, real-time support for your team.',
     },
     {
       q: 'Can you work directly with our existing PMS and tech stack?',
