@@ -350,10 +350,10 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
               </div>
               <div>
                 <div style={{ fontSize: '0.95rem', fontWeight: 700, color: '#ffffff', letterSpacing: '-0.01em' }}>
-                  800+ Holiday Homes
+                  1,030+ STR Properties
                 </div>
                 <div style={{ fontSize: '0.72rem', color: 'var(--text-on-dark-muted)' }}>
-                  Managed & Synchronized
+                  Supported & Synchronized
                 </div>
               </div>
             </div>
@@ -362,6 +362,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
 
         {/* Metrics Banner */}
         <div
+          className="metrics-grid"
           style={{
             marginTop: '4.5rem',
             backgroundColor: 'var(--bg-surface)',
@@ -424,6 +425,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
         @media (min-width: 960px) {
           .hero-grid {
             grid-template-columns: 1.15fr 0.85fr !important;
+          }
+        }
+        @media (min-width: 1024px) {
+          .metrics-grid {
+            grid-template-columns: repeat(5, 1fr) !important;
           }
         }
         @media (max-width: 768px) {

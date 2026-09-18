@@ -49,11 +49,11 @@ export const portfolioData = {
   },
 
   metrics: [
-    { label: 'Years Experience', value: '8+', caption: 'Supporting AU & UAE Property Firms' },
-    { label: 'Properties Managed', value: '800+', caption: 'Holiday Homes & Rental Units' },
-    { label: 'Weekly Invoices', value: '500+', caption: 'Homhero & MYOB Audited Weekly' },
-    { label: 'NSW STRA Compliance', value: '230+', caption: 'Full Regulatory Approvals' },
-    { label: 'Turnover & OTAs', value: '99%', caption: 'SLA Accuracy Across Airbnb, Booking & VRBO' },
+    { label: 'Years Experience', value: '8+', caption: 'Supporting AU, UAE Property Firms' },
+    { label: 'STR Properties Supported', value: '1,030+', caption: 'Holiday Homes & Rental Units' },
+    { label: 'Guest Inquiries Daily', value: '40+', caption: 'Reservations/Sales & Customer Support' },
+    { label: 'Weekly Invoices', value: '500+', caption: 'Finance & Administrative Support' },
+    { label: 'Team Members Trained', value: '15+', caption: 'Reservations & Systems Onboarding' },
   ],
 
   services: [

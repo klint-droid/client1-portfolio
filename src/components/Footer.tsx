@@ -119,7 +119,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
               </div>
             </div>
             <p style={{ fontSize: '0.88rem', color: 'var(--text-on-dark-muted)', lineHeight: 1.6, marginBottom: '1.25rem' }}>
-              Senior Real Estate & Holiday Home Operations Virtual Assistant with 8+ years experience managing 800+ properties across Australia and the UAE.
+              Senior Real Estate & Holiday Home Operations Virtual Assistant with 8+ years experience supporting 1,030+ properties across Australia and the UAE.
             </p>
             <div style={{ fontSize: '0.78rem', color: 'var(--text-on-dark-muted)' }}>
               Laguna, Philippines • Flexible AU (AEST) Hours
