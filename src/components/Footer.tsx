@@ -229,7 +229,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
                   onMouseEnter={(e) => (e.currentTarget.style.color = '#ffffff')}
                   onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-on-dark-muted)')}
                 >
-                  Portfolio ROI Estimator
+                  Admin Cost Calculator
                 </button>
               </li>
             </ul>

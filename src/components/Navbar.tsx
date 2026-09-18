@@ -43,7 +43,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact }) => {
     { label: 'Experience', id: 'experience' },
     { label: 'Systems', id: 'systems' },
     { label: 'Reliability', id: 'reliability' },
-    { label: 'ROI Calculator', id: 'calculator' },
+    { label: 'Cost Calculator', id: 'calculator' },
   ];
 
   return (
