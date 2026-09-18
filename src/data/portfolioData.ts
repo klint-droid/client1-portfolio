@@ -1,7 +1,7 @@
 export interface Service {
   id: string;
   title: string;
-  category: 'stra' | 'real-estate' | 'reservations' | 'finance';
+  category: 'executive' | 'operations' | 'real-estate' | 'finance' | 'stra' | 'reservations';
   tagline: string;
   description: string;
   tools: string[];
@@ -58,66 +58,86 @@ export const portfolioData = {
 
   services: [
     {
-      id: 'stra-operations',
-      title: 'Holiday Home & STRA Operations',
-      category: 'stra',
-      tagline: 'Flawless Multi-Calendar Sync & Turnover Logistics',
+      id: 'executive-support',
+      title: 'Executive & Administrative Support',
+      category: 'executive',
+      tagline: 'Streamlining Your Day-to-Day Priorities and Administration',
       description:
-        'Complete end-to-end management for short-term rental portfolios. Ensuring synchronized pricing, zero double-bookings, rapid listing launches, and seamless guest turnovers.',
-      tools: ['Homhero', 'PriceLabs', 'Airbnb', 'Booking.com', 'VRBO'],
+        'Providing reliable executive and administrative support that helps business owners and teams stay organised, responsive, and focused on higher-value priorities.',
+      tools: ['Google Workspace', 'Microsoft Office', 'HubSpot', 'Slack', 'CRM Systems'],
       deliverables: [
-        'Daily dynamic pricing & minimum stay updates across OTAs via PriceLabs',
-        'End-to-end listing creation, photography checks, and multi-channel publishing',
-        'Daily turnover dispatch for 30+ properties to housekeeping teams',
-        'Guest arrival readiness verification and VIP welcome arrangements',
+        'Inbox and email management, follow-ups, and correspondence',
+        'Calendar, scheduling, meeting, and appointment coordination',
+        'Document preparation, data entry, and file management',
+        'CRM updates, database maintenance, and information tracking',
+        'Task coordination, reminders, and administrative follow-through',
+        'SOP creation, process documentation, and team onboarding',
       ],
-      badge: 'Core Specialty',
+      badge: 'Executive Focus',
     },
     {
-      id: 'compliance-admin',
-      title: 'Real Estate Admin & Regulatory Compliance',
+      id: 'operations-support',
+      title: 'Operations & Business Support',
+      category: 'operations',
+      tagline: 'Coordinating the Moving Parts Behind Your Business',
+      description:
+        'Supporting day-to-day operations through coordination, process management, team support, and consistent follow-through across multiple priorities.',
+      tools: ['Google Workspace', 'Microsoft Office', 'Slack', 'HubSpot', 'CRM Systems'],
+      deliverables: [
+        'Day-to-day operational and administrative coordination',
+        'Cross-department communication and task follow-up',
+        'Workflow and process documentation',
+        'SOP development and process improvement',
+        'Team onboarding, training, and system familiarisation',
+        'Data tracking, reporting, and recurring operational tasks',
+        'Coordination with internal teams, clients, and external providers',
+      ],
+      badge: 'Operations Core',
+    },
+    {
+      id: 'real-estate-property',
+      title: 'Real Estate & Property Administration',
       category: 'real-estate',
-      tagline: 'De-Risking Portfolios with Rigorous Standards',
+      tagline: 'Managing the Details Behind Property Operations',
       description:
-        'Comprehensive documentation control and statutory compliance for Australian and UAE markets, preventing costly fines and delays.',
-      tools: ['NSW STRA Portal', 'Trakheesi', 'Ejari', 'MyCRM', 'Brokerpad'],
-      deliverables: [
-        'Management of NSW STRA registration, annual renewals, and compliance logs for 230+ homes',
-        'Trakheesi advertising permit approvals, Title Deed validation, and listing verification',
-        'Ejari tenancy agreement registration and contract processing',
-        'Closed-deal documentation: sales/rental agreements, deposit cheques, and receipts',
+        'Supporting real estate and short-term rental businesses with property administration, listing coordination, compliance documentation, and operational processes.',
+      tools: [
+        'Homhero',
+        'Proprietary PMS',
+        'PriceLabs',
+        'Airbnb',
+        'Booking.com',
+        'Vrbo',
+        'NSW STRA',
+        'Trakheesi',
+        'Ejari',
       ],
-      badge: 'High Precision',
-    },
-    {
-      id: 'reservations-concierge',
-      title: 'High-Volume Reservations & Guest Experience',
-      category: 'reservations',
-      tagline: 'Turning Inquiries into Confirmed Bookings',
-      description:
-        'Fast, empathetic, and conversion-focused guest communications. From initial pre-booking inquiries to post-stay reviews and dispute resolution.',
-      tools: ['HubSpot CRM', 'Slack', 'Email Triage', 'Google Workspace'],
       deliverables: [
-        'Triaging 80+ emails and 50+ inquiries daily with rapid response SLAs',
-        'Reservation pipeline coordination from quote to confirmed payment',
-        'Cross-departmental escalation routing (Finance, Maintenance, Housekeeping)',
-        'Creation of standardized guest communication SOPs and team training modules',
+        'Short-term rental listing creation, updates, and multi-channel publishing',
+        'Daily pricing and minimum-stay updates using PriceLabs',
+        'NSW STRA registrations, renewals, and compliance tracking for 230+ properties',
+        'Trakheesi advertising permits, Title Deed validation, and listing verification',
+        'Ejari registration and processing of sales and rental documentation',
+        'Turnover coordination and guest arrival readiness for 30+ properties',
       ],
-      badge: 'High Conversion',
+      badge: 'Property Specialist',
     },
     {
       id: 'finance-backoffice',
-      title: 'Financial Administration & Back-Office Auditing',
+      title: 'Financial Administration & Back-Office Support',
       category: 'finance',
-      tagline: 'Clean Books, Timely Payouts & Exact GST Allocation',
+      tagline: 'Handling the Details That Keep Finances and Administration on Track',
       description:
-        'Accurate ledger management for property owners and vendor accounts, keeping accounting audits clean and stress-free.',
-      tools: ['Homhero', 'MYOB', 'ActiveCampaign', 'Process St'],
+        'Supporting businesses with invoice processing, billing administration, vendor documentation, and recurring back-office tasks that require accuracy and attention to detail.',
+      tools: ['Homhero', 'MYOB', 'ActiveCampaign', 'Google Sheets', 'Microsoft Office'],
       deliverables: [
-        'Weekly intake, verification, and property assignment for 500+ third-party invoices',
-        'GST reconciliation and vendor creditor validation before final approval',
-        'Generation of monthly billing statements and owner invoices in MYOB',
-        'Creation and scheduling of 10+ email marketing campaigns monthly via ActiveCampaign',
+        'Weekly processing and verification of 500+ third-party invoices',
+        'Invoice matching, property assignment, and vendor documentation checks',
+        'GST-related invoice review and creditor validation',
+        'Monthly billing statements and owner invoices using MYOB',
+        'Refund, payment, and finance-related administrative coordination',
+        'Administrative support for recurring email marketing campaigns',
+        'Spreadsheet maintenance, data tracking, and recurring reporting',
       ],
       badge: 'Zero Backlog',
     },

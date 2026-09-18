@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { portfolioData, type Service } from '../data/portfolioData';
 import {
-  IconHome,
   IconBuilding,
-  IconUsers,
   IconDollarSign,
   IconCheckCircle,
   IconArrowRight,
+  IconFileText,
+  IconLaptop,
 } from './Icons';
 
 interface ServicesSectionProps {
@@ -19,10 +19,10 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
 
   const categories = [
     { id: 'all', label: 'All Capabilities' },
-    { id: 'stra', label: 'STRA & Holiday Homes' },
-    { id: 'real-estate', label: 'Real Estate Compliance' },
-    { id: 'reservations', label: 'Reservations & Concierge' },
-    { id: 'finance', label: 'Finance & Invoicing' },
+    { id: 'executive', label: 'Executive & Admin' },
+    { id: 'operations', label: 'Operations & Business' },
+    { id: 'real-estate', label: 'Real Estate & Property' },
+    { id: 'finance', label: 'Finance & Back-Office' },
   ];
 
   const filteredServices =
@@ -32,16 +32,16 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
 
   const getServiceIcon = (category: Service['category']) => {
     switch (category) {
-      case 'stra':
-        return <IconHome size={22} />;
+      case 'executive':
+        return <IconFileText size={22} />;
+      case 'operations':
+        return <IconLaptop size={22} />;
       case 'real-estate':
         return <IconBuilding size={22} />;
-      case 'reservations':
-        return <IconUsers size={22} />;
       case 'finance':
         return <IconDollarSign size={22} />;
       default:
-        return <IconHome size={22} />;
+        return <IconFileText size={22} />;
     }
   };
 
