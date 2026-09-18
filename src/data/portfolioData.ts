@@ -312,8 +312,8 @@ export const portfolioData = {
       a: 'Yes! I have over 8 years of hands-on experience in Homhero, PriceLabs, HubSpot, ActiveCampaign, MYOB, and major OTA platforms (Airbnb, Booking.com, VRBO). I adapt swiftly to bespoke proprietary systems.',
     },
     {
-      q: 'How do you handle invoice auditing and GST compliance?',
-      a: 'At Professional Holiday Homes, I process over 500 invoices weekly in Homhero, verifying contractor charges, cross-referencing GST calculations, allocating costs to the exact property code, and preparing clean batches for MYOB payment.',
+      q: 'How do you handle invoice auditing and GST-related administration?',
+      a: 'I have experience processing 500+ third-party invoices weekly, verifying contractor charges, cross-referencing GST calculations, allocating costs to the correct property code, and preparing clean batches for MYOB processing.',
     },
     {
       q: 'What is your availability for new contracts?',
